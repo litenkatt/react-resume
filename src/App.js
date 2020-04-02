@@ -2,13 +2,13 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import {theme} from './theme';
 
-import {Header} from './components/Header';
+import {Main} from './views/Main';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Header />
+        <Main />
       </div>
     </ThemeProvider>
   );
