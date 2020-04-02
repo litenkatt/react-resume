@@ -6,8 +6,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "i18next": "^19.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-i18next": "^11.3.4",
     "react-scripts": "3.4.1",
     "styled-components": "^5.0.1",
     "styled-tools": "^1.7.1"

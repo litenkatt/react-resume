@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { theme } from 'styled-tools';
+import { useTranslation } from 'react-i18next';
 
 const intro = keyframes`
   from {
@@ -11,7 +12,6 @@ const intro = keyframes`
 `;
 
 const StyledHeader = styled.div`
-  margin: 2rem;
   border-bottom: 2px black solid;
 `;
 
@@ -31,9 +31,14 @@ const StyledLogo = styled.div`
 `;
 
 export const Header = ({}) => {
+  const { t, i18n } = useTranslation();
+  console.log(t)
   return (
     <StyledHeader>
-      <StyledLogo><span>NINNI</span><span>HÖRNAEUS</span></StyledLogo>
+      <StyledLogo>
+        <span>{t('firstName')}</span>
+        <span>HÖRNAEUS</span>
+      </StyledLogo>
     </StyledHeader>
   );
 };
