@@ -32,7 +32,7 @@ jobs:
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.3.0
       with:
-         repo: litenkatt/litenkatt.github.io.git
+         repo: litenkatt/litenkatt.github.io
          target_branch: master
          build_dir: build
       env:
