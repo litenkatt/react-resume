@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - name: Checkout
@@ -32,8 +32,9 @@ jobs:
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.3.0
       with:
-         target_branch: gh-pages
+         repo: litenkatt/litenkatt.github.io
+         target_branch: master
          build_dir: build
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_PAT: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         CI: true
