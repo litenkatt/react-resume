@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Header } from '../components/Header';
 
 const StyledMain = styled.div`
@@ -7,7 +7,7 @@ const StyledMain = styled.div`
   margin: 0 2rem;
 `;
 
-export const Main = ({}) => {
+export const Main = () => {
   return (
     <StyledMain>
       <Header />

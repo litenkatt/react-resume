@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { theme } from 'styled-tools';
-import { useTranslation } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 const intro = keyframes`
   from {
@@ -27,11 +27,9 @@ const StyledLogo = styled.div`
   & > span:nth-child(2){
     font-size: 80%;
   }
-
 `;
 
-export const Header = ({}) => {
-  const { t, i18n } = useTranslation();
+export const Header = withTranslation('header')(({ t }) => {
   console.log(t)
   return (
     <StyledHeader>
@@ -41,4 +39,4 @@ export const Header = ({}) => {
       </StyledLogo>
     </StyledHeader>
   );
-};
+});
