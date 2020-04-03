@@ -29,13 +29,12 @@ const StyledLogo = styled.div`
   }
 `;
 
-export const Header = withTranslation('header')(({ t }) => {
-  console.log(t)
+export const Header = withTranslation('header')(({ t, i18n }) => {
   return (
     <StyledHeader>
       <StyledLogo>
         <span>{t('firstName')}</span>
-        <span>HÖRNAEUS</span>
+        <span>{t('lastName')}</span>
       </StyledLogo>
     </StyledHeader>
   );
