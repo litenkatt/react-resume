@@ -11,6 +11,7 @@ export const Main = () => {
   return (
     <StyledMain>
       <Header />
+      hejhej
     </StyledMain>
   );
 };
