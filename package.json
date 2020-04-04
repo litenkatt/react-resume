@@ -13,7 +13,8 @@
     "react-i18next": "^11.3.4",
     "react-scripts": "3.4.1",
     "styled-components": "^5.0.1",
-    "styled-tools": "^1.7.1"
+    "styled-tools": "^1.7.1",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

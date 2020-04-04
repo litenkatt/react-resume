@@ -1,9 +1,16 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+import WebFont from 'webfontloader';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import './translation/i18n';
+import './i18n';
+
+WebFont.load({
+  google: {
+    families: ['Syncopate:wght@400;700', 'sans-serif']
+  }
+});
 
 ReactDOM.render(
   <React.StrictMode>

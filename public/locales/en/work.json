@@ -2,7 +2,11 @@
     "title": "Work experience",
     "items": [
         {
-            
+            "title":"Developer",
+            "subTitle":"Zensum",
+            "dates": "OCTOBER 2019 - MARCH 2020",
+            "description":"Worked almost exclusively with front-end, both internal and external systems built in React.js.",
+            "extra":"Tech: React.js, datoCMS, Styled components, i18next, netlify "
         }
     ]
 }
