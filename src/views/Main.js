@@ -7,6 +7,7 @@ import { Section } from '../components/Section';
 const StyledMain = styled.div`
   height: 100%;
   margin: 0 2rem;
+  min-width: calc(320px - 4rem);
 `;
 
 const WorkExperience = withTranslation('work')(Section);

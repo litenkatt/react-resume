@@ -20,5 +20,6 @@ export const theme = {
   breakpoint: 600,
   colors: {
     purple: '#9055b5',
+    grey: '#636363',
   },
 };

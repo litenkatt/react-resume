@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Syncopate', sans-serif;    
+    box-sizing: border-box;
   }
 
   h1, h2, h3, h4, h5 {
@@ -19,13 +20,18 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${theme('fontSizes.enormous')};
   }
 
+  h2 {
+    font-size: ${theme('fontSizes.big')};
+  }
+
   small {
     font-size: ${theme('fontSizes.mini')};
-    margin: 1rem;
+    display: block;
+    margin: 0.5rem 1rem;
   }
 
   p {
     font-family: 'Gotu', sans-serif;   
-    margin: 1rem; 
+    margin: 0.5rem 1rem ; 
   }
 `;
