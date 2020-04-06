@@ -20,7 +20,7 @@ function App() {
   };
 
   const fontSizes = desktop ? desktopFontSizes : mobileFontSizes;
-  const combinedTheme = {...theme, fontSizes}
+  const combinedTheme = {...theme, fontSizes, desktop}
   return (
     <ThemeProvider theme={combinedTheme}>
       <div className="App">
