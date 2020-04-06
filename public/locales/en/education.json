@@ -1,0 +1,19 @@
+{
+    "title": "Education",
+    "subSections": [
+        {
+            "title":"Bachelor's programme in computer and systems science",
+            "subTitle":"Stockholm university",
+            "dates": "SEPTEMBER 2015 – JUNE 2018 ",
+            "description":"Mostly courses in programming. Last assignment sent in, waiting for grading.",
+            "extra":"Waiting for grading"
+        },
+        {
+            "title":"Bachelor's programme in game design",
+            "subTitle":"Stockholm university",
+            "dates": "MARCH 2019 - OCTOBER 2019",
+            "description":"Switched to computer and system science after realising that I am more of a programmer than designer.",
+            "extra":"Not completed"
+        }
+    ]
+}

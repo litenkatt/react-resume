@@ -6,7 +6,7 @@ import {GlobalStyle} from './styling/GlobalStyle';
 import {Main} from './views/Main';
 
 function App() {
-  const [desktop, setDesktop] = useState(window.innerwidth > theme.breakpoint);
+  const [desktop, setDesktop] = useState(window.innerWidth > theme.breakpoint);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);

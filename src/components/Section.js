@@ -2,7 +2,9 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { theme } from 'styled-tools';
 
-const StyledSection = styled.div``;
+const StyledSection = styled.div`
+border-left: 1px dashed black;
+`;
 
 const StyledItem = styled.div`
   & > h3 {
@@ -29,7 +31,7 @@ export const Section = ({ t, i18n }) => {
             </h3>
             <h4>{s.dates}</h4>
             <p>{s.description}</p>
-            <small>{s.extra}</small>
+            {s.extra &&<small>{s.extra}</small>}
           </StyledItem>
         ))}
       </div>

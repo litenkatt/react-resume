@@ -10,6 +10,7 @@ const StyledMain = styled.div`
 `;
 
 const WorkExperience = withTranslation('work')(Section);
+const Education = withTranslation('education')(Section);
 
 
 export const Main = () => {
@@ -17,6 +18,7 @@ export const Main = () => {
     <StyledMain>
       <Header />
       <WorkExperience />
+      <Education />
     </StyledMain>
   );
 };
