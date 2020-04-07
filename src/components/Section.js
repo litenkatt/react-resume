@@ -8,13 +8,20 @@ const StyledSection = styled.div`
 `;
 
 const StyledItem = styled.div`
+  &:hover {
+    & > h3,
+    & > h4,
+    & > h6,
+    & > p {
+      font-size: 2em;
+    }
+  }
   & > h3 {
     & > span:first-child {
       margin-right: 1rem;
     }
     & > span:nth-child(3) {
       color: ${theme('colors.purple')};
-      /* margin-left: 1rem; */
     }
     margin-bottom: 0.5rem;
   }
@@ -35,11 +42,13 @@ export const Section = ({ t, i18n }) => {
         {t('subSections', { returnObjects: true }).map((s) => (
           <StyledItem key={`${s.subTitle}_${s.dates}`}>
             <h3>
-              <span>{s.title}</span><br /><span>{s.subTitle}</span>
+              <span>{s.title}</span>
+              <br />
+              <span>{s.subTitle}</span>
             </h3>
-            <h4>{s.dates}</h4>
-            <p>{s.description}</p>
-            {s.extra && <small>{s.extra}</small>}
+            {s.dates && <h4>{s.dates}</h4>}
+            {s.description && <p>{s.description}</p>}
+            {s.extra && <h6>{s.extra}</h6>}
           </StyledItem>
         ))}
       </div>

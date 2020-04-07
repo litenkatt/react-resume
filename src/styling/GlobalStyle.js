@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, h6 {
     font-weight:700;
     margin: 1rem;
   }
@@ -24,9 +24,8 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${theme('fontSizes.big')};
   }
 
-  small {
+  h6 {
     font-size: ${theme('fontSizes.mini')};
-    display: block;
     margin: 0.5rem 1rem;
   }
 
