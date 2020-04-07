@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Syncopate', sans-serif;    
     box-sizing: border-box;
+    background: ${theme('colors.base')};
+    color: ${theme('colors.body')};
   }
 
   h1, h2, h3, h4, h5, h6 {

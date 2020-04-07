@@ -1,17 +1,25 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import {theme, desktopFontSizes, mobileFontSizes} from './styling/theme';
-import {GlobalStyle} from './styling/GlobalStyle';
+import { ThemeContext } from './utils/contexts';
+import {
+  theme,
+  desktopFontSizes,
+  mobileFontSizes,
+  darkColors,
+  lightColors,
+} from './styling/theme';
+import { GlobalStyle } from './styling/GlobalStyle';
 
-import {Main} from './views/Main';
+import { Main } from './views/Main';
 
 function App() {
   const [desktop, setDesktop] = useState(window.innerWidth > theme.breakpoint);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -20,13 +28,16 @@ function App() {
   };
 
   const fontSizes = desktop ? desktopFontSizes : mobileFontSizes;
-  const combinedTheme = {...theme, fontSizes, desktop}
+  const colors = dark ? darkColors : lightColors;
+  const combinedTheme = { ...theme, fontSizes, desktop, colors, dark };
   return (
     <ThemeProvider theme={combinedTheme}>
-      <div className="App">
-        <Main />
-      </div>
-      <GlobalStyle />
+      <ThemeContext.Provider value={{ dark, setDark }}>
+        <div className="App">
+          <Main setDark={setDark} />
+        </div>
+        <GlobalStyle />
+      </ThemeContext.Provider>
     </ThemeProvider>
   );
 }

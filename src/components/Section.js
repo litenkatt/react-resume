@@ -3,12 +3,13 @@ import styled, { keyframes } from 'styled-components';
 import { theme } from 'styled-tools';
 
 const StyledSection = styled.div`
-  border-left: 1px dashed black;
+  border-left: 1px dashed ${theme('colors.body')};;
   margin: 2rem 0;
 `;
 
 const StyledItem = styled.div`
   &:hover {
+    width: 5000px;
     & > h3,
     & > h4,
     & > h6,
@@ -21,7 +22,7 @@ const StyledItem = styled.div`
       margin-right: 1rem;
     }
     & > span:nth-child(3) {
-      color: ${theme('colors.purple')};
+      color: ${theme('colors.accent')};
     }
     margin-bottom: 0.5rem;
   }

@@ -16,10 +16,20 @@ export const mobileFontSizes = {
   enormous: '2.9rem',
 };
 
+export const lightColors = {
+  accent: '#9055b5',
+  grey: '#636363',
+  base: "#FFFFFF",
+  body: "#000000"
+};
+
+export const darkColors = {
+  accent: '#FF0745',
+  grey: '#636363',
+  base: "#000000",
+  body: "#FFFFFF"
+};
+
 export const theme = {
   breakpoint: 600,
-  colors: {
-    purple: '#9055b5',
-    grey: '#636363',
-  },
 };
