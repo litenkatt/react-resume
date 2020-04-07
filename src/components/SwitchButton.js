@@ -20,7 +20,7 @@ const StyledSwitchButton = styled.div`
   }
 `;
 
-export const SwitchButton = ({}) => {
+export const SwitchButton = () => {
   const theme = useContext(ThemeContext);
   const { dark, setDark } = theme;
 

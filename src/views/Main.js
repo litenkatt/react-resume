@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { ifNotProp } from 'styled-tools';
 import { withTranslation } from 'react-i18next';
@@ -19,7 +19,7 @@ const StyledContent = styled.div`
 const WorkExperience = withTranslation('work')(Section);
 const Education = withTranslation('education')(Section);
 
-export const Main = ({}) => {
+export const Main = () => {
   return (
     <StyledMain>
       <Header />
