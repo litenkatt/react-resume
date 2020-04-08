@@ -19,6 +19,9 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  & > div {
+    display: flex;
+  }
 `;
 
 const StyledLogo = styled.h1`
@@ -41,8 +44,10 @@ export const Header = withTranslation('header')(({ t, i18n, props }) => {
         <span>{t('firstName')}</span>
         <span>{t('lastName')}</span>
       </StyledLogo>
-      <LanguageChangeButton i18n={i18n}/>
-      <SwitchButton {...props} />
+      <div>
+        <LanguageChangeButton i18n={i18n} />
+        <SwitchButton {...props} />
+      </div>
     </StyledHeader>
   );
 });
