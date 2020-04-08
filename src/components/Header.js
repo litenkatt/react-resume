@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { theme } from 'styled-tools';
 import { withTranslation } from 'react-i18next';
 import { SwitchButton } from './SwitchButton';
+import { LanguageChangeButton } from './LanguageChangeButton';
 
 const intro = keyframes`
   from {
@@ -40,7 +41,8 @@ export const Header = withTranslation('header')(({ t, i18n, props }) => {
         <span>{t('firstName')}</span>
         <span>{t('lastName')}</span>
       </StyledLogo>
-      <SwitchButton {...props}/>
+      <LanguageChangeButton i18n={i18n}/>
+      <SwitchButton {...props} />
     </StyledHeader>
   );
 });

@@ -37,4 +37,4 @@ jobs:
          build_dir: build
       env:
         GITHUB_PAT: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        CI: false
+        CI: true

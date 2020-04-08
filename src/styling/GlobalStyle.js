@@ -7,10 +7,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Syncopate', sans-serif;    
+    font-family: 'Gotu', sans-serif;   
     box-sizing: border-box;
     background: ${theme('colors.base')};
     color: ${theme('colors.body')};
+  
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -20,10 +21,12 @@ export const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: ${theme('fontSizes.enormous')};
+    font-family: 'Syncopate', sans-serif;    
   }
 
   h2 {
     font-size: ${theme('fontSizes.big')};
+    font-family: 'Syncopate', sans-serif;    
   }
 
   h6 {
@@ -32,7 +35,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    font-family: 'Gotu', sans-serif;   
     margin: 0.5rem 1rem ; 
   }
 `;

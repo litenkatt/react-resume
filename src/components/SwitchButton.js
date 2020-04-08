@@ -9,6 +9,7 @@ const StyledSwitchButton = styled.div`
   background: ${theme('colors.grey')};
   border-radius: 10%;
   overflow: hidden;
+  cursor: pointer;
   & > div {
       position: relative;
     top: ${ifProp( "dark" , "2rem", "0")};

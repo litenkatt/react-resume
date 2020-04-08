@@ -1,0 +1,32 @@
+{
+    "title": "Arbetslivserfarenhet",
+    "subSections": [
+        {
+            "title":"Frontendutvecklare",
+            "subTitle":"Zensum",
+            "dates": "OKTOBER 2019 - MARS 2020",
+            "description":"Arbetade i en ronodlat frontendteam med att bygga applikationer i react, det mesta från scratch",
+            "extra":"Teknik: React.js, Styled components, i18next, datoCMS"
+        },
+        {
+            "title":"Utvecklare",
+            "subTitle":"Scania",
+            "dates": "MARS 2019 - OKTOBER 2019",
+            "description":"Fortsatte som anställd på Scania efter traineeperioden. Under denna period arbetade jag främst med backend.",
+            "extra":"Teknik: Java, Springboot, React.js, AWS "
+        },
+        {
+            "title":"Utvecklare",
+            "subTitle":"Scania – via Sigma Young Talent",
+            "dates": "SEPTEMBER 2018 - MARS 2019",
+            "description":"Traineeprogram placerat på Scania. Kurser varvades med faktiskt jobb. Det mesta av arbetet under denna period skedde med hjälp av React.",
+            "extra":"Teknik: React.js, Java, Springboot"
+        },
+        {
+            "title":"IT-support",
+            "subTitle":"Nya Karolinska – via Academic Work",
+            "dates": "OCTOBER 2016 – FEBRUARY 2017",
+            "description":"Arbetade extra som IT-support vid sidan av studierna under öppningen av NKS. Arbetsuppgifterna bestod främst utav att installera hårdvara och vara tillgänglig för frågor."
+        }
+    ]
+}
