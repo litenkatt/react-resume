@@ -37,4 +37,11 @@ export const GlobalStyle = createGlobalStyle`
   p {
     margin: 0.5rem 1rem ; 
   }
+
+  a {
+    font-family: 'Syncopate', sans-serif;    
+    font-weight: 700;
+    text-decoration: none;
+    color: ${theme('colors.accent')};
+  }
 `;

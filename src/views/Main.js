@@ -4,6 +4,8 @@ import { ifNotProp } from 'styled-tools';
 import { withTranslation } from 'react-i18next';
 import { Header } from '../components/Header';
 import { Section } from '../components/Section';
+import { InfoBox } from '../components/InfoBox';
+
 
 const StyledMain = styled.div`
   height: 100%;
@@ -13,11 +15,15 @@ const StyledMain = styled.div`
 
 const StyledContent = styled.div`
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   flex-wrap: ${ifNotProp('theme.desktop', 'wrap')};
 `;
 
 const WorkExperience = withTranslation('work')(Section);
 const Education = withTranslation('education')(Section);
+const Contact = withTranslation('contact')(InfoBox);
+
 
 export const Main = () => {
   return (
@@ -26,6 +32,7 @@ export const Main = () => {
       <StyledContent>
         <WorkExperience />
         <Education />
+        <Contact />
       </StyledContent>
     </StyledMain>
   );
