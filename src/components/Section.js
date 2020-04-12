@@ -9,15 +9,6 @@ const StyledSection = styled.div`
 `;
 
 const StyledItem = styled.div`
-  &:hover {
-    width: 5000px;
-    & > h3,
-    & > h4,
-    & > h6,
-    & > p {
-      font-size: 2em;
-    }
-  }
   & > h3 {
     & > span:first-child {
       margin-right: 1rem;
