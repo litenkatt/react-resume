@@ -5,6 +5,7 @@ import { theme } from 'styled-tools';
 const StyledSection = styled.div`
   border-left: 1px dashed ${theme('colors.body')};;
   margin: 2rem 0;
+  flex: 1 0 calc(320px - 4rem);;
 `;
 
 const StyledItem = styled.div`
@@ -31,8 +32,6 @@ const StyledItem = styled.div`
     margin: 0.5rem 1rem;
   }
   margin: 2rem 0;
-  max-width: calc(600px - 4rem);
-  min-width: calc(320px - 4rem);
 `;
 
 export const Section = ({ t, i18n }) => {

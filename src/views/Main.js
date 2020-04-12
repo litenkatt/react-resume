@@ -17,7 +17,8 @@ const StyledContent = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: ${ifNotProp('theme.desktop', 'wrap')};
+  flex-wrap: wrap;
+  /* flex-wrap: ${ifNotProp('theme.desktop', 'wrap')}; */
 `;
 
 const WorkExperience = withTranslation('work')(Section);
