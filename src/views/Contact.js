@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { withTranslation } from 'react-i18next';
-import { Section } from '../components/Section';
+import { InfoBox } from '../components/InfoBox';
 
 const StyledMain = styled.div`
   display: flex;
@@ -10,15 +10,12 @@ const StyledMain = styled.div`
   flex-wrap: wrap;
 `;
 
-const WorkExperience = withTranslation('work')(Section);
-const Education = withTranslation('education')(Section);
+const Info = withTranslation('contact')(InfoBox);
 
-
-export const Main = () => {
+export const Contact = () => {
   return (
       <StyledMain>
-        <WorkExperience />
-        <Education />
+        <Info />
       </StyledMain>
   );
 };

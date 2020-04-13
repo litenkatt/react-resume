@@ -22,6 +22,10 @@ const StyledItem = styled.div`
     color: ${theme('colors.grey')};
     margin: 0.5rem 1rem;
   }
+  & > h6 {
+    color: ${theme('colors.grey')};
+    font-style: italic;
+  }
   margin: 2rem 0;
 `;
 

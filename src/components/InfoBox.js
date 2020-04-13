@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
 const StyledInfobox = styled.div`
-  border: 1px solid ${theme('colors.body')};;
+  border: 1px solid ${theme('colors.body')};
   margin: 2rem 0;
   font-size: 2rem;
   padding: 1rem;

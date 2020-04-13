@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeContext } from './utils/contexts';
 import {
   theme,
@@ -9,8 +10,7 @@ import {
   lightColors,
 } from './styling/theme';
 import { GlobalStyle } from './styling/GlobalStyle';
-
-import { Main } from './views/Main';
+import { Router } from './Router';
 
 function App() {
   const [desktop, setDesktop] = useState(window.innerWidth > theme.breakpoint);
@@ -34,7 +34,9 @@ function App() {
     <ThemeProvider theme={combinedTheme}>
       <ThemeContext.Provider value={{ dark, setDark }}>
         <div className="App">
-          <Main setDark={setDark} />
+          <BrowserRouter>
+            <Router />
+          </BrowserRouter>
         </div>
         <GlobalStyle />
       </ThemeContext.Provider>
