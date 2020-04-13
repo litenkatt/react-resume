@@ -14,12 +14,12 @@ const StyledNavigation = styled.div`
 `;
 
 const LeftArrowLink = styled(Link)`
-  left: 2rem;
+  left: 1rem;
   transform: scaleX(-1);
 `;
 
 const RightArrowLink = styled(Link)`
-  right: 2rem;
+  right: 1rem;
 `;
 
 export const Navigation = ({ before, after }) => {

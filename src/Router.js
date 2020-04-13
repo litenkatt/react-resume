@@ -13,6 +13,10 @@ const StyledRouter = styled.div`
   min-width: calc(320px - 4rem);
 `;
 
+const StyledContent = styled.div`
+  margin: 0 4rem;
+`;
+
 export const Router = () => {
   const routes = ['/', '/main', '/contact'];
   const current = useLocation();
@@ -21,18 +25,23 @@ export const Router = () => {
   return (
     <StyledRouter>
       <Header />
-      <Navigation before={routes[currentIndex-1]} after={routes[currentIndex+1]} />
-      <Switch>
-        <Route path="/main">
-          <Main />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/">
-          <Welcome />
-        </Route>
-      </Switch>
+      <Navigation
+        before={routes[currentIndex - 1]}
+        after={routes[currentIndex + 1]}
+      />
+      <StyledContent>
+        <Switch>
+          <Route path="/main">
+            <Main />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/">
+            <Welcome />
+          </Route>
+        </Switch>
+      </StyledContent>
     </StyledRouter>
   );
 };
