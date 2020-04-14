@@ -13,7 +13,9 @@ import { GlobalStyle } from './styling/GlobalStyle';
 import { Router } from './Router';
 
 function App() {
-  const [desktop, setDesktop] = useState(window.innerWidth > theme.breakpoint);
+  const [desktop, setDesktop] = useState(window.innerWidth > theme.desktopBreakpoint);
+  const [small, setSmall] = useState(window.innerWidth < theme.smallBreakpoint);
+
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
@@ -24,15 +26,16 @@ function App() {
   }, []);
 
   const handleResize = (e) => {
-    setDesktop(e.target.innerWidth > theme.breakpoint);
+    setDesktop(e.target.innerWidth > theme.desktopBreakpoint);
+    setSmall(e.target.innerWidth < theme.smallBreakpoint);
   };
 
   const fontSizes = desktop ? desktopFontSizes : mobileFontSizes;
   const colors = dark ? darkColors : lightColors;
-  const combinedTheme = { ...theme, fontSizes, desktop, colors, dark };
+  const combinedTheme = { ...theme, fontSizes, desktop, small, colors, dark };
   return (
     <ThemeProvider theme={combinedTheme}>
-      <ThemeContext.Provider value={{ dark, setDark }}>
+      <ThemeContext.Provider value={{ dark, setDark, small }}>
         <div className="App">
           <BrowserRouter>
             <Router />

@@ -4,6 +4,7 @@ import { theme, ifProp } from 'styled-tools';
 import { ThemeContext } from '../utils/contexts';
 
 const StyledSwitchButton = styled.div`
+margin-right: 1rem;
   height: 4rem;
   width: 3rem;
   background: ${theme('colors.grey')};
@@ -17,13 +18,11 @@ const StyledSwitchButton = styled.div`
     background: ${theme('colors.body')};
     height: 2rem;
     width: 3rem;
-
   }
 `;
 
 export const SwitchButton = () => {
-  const theme = useContext(ThemeContext);
-  const { dark, setDark } = theme;
+  const { dark, setDark } = useContext(ThemeContext);
 
   const handleSwitch = () => {
     setDark(!dark);

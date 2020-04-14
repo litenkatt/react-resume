@@ -16,6 +16,7 @@ const StyledRouter = styled.div`
 
 const StyledContent = styled.div`
   margin: ${ifProp('theme.desktop', '0 4rem')};
+  margin-bottom: 10rem;
 `;
 
 export const Router = () => {

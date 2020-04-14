@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { theme } from 'styled-tools';
 import { withTranslation } from 'react-i18next';
 import { SwitchButton } from './SwitchButton';
 import { LanguageChangeButton } from './LanguageChangeButton';
+import { ThemeContext } from '../utils/contexts';
 
 const intro = keyframes`
   from {
@@ -38,11 +39,15 @@ const StyledLogo = styled.h1`
 `;
 
 export const Header = withTranslation('header')(({ t, i18n, props }) => {
+  const { small } = useContext(ThemeContext);
+  console.log(small);
+  const firstName = small ? t('firstName')[0] : t('firstName')
+  const lastName = small ? t('lastName')[0] : t('lastName')
   return (
     <StyledHeader>
       <StyledLogo>
-        <span>{t('firstName')}</span>
-        <span>{t('lastName')}</span>
+        <span>{firstName}</span>
+        <span>{lastName}</span>
       </StyledLogo>
       <div>
         <LanguageChangeButton i18n={i18n} />

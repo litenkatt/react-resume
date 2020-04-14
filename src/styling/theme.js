@@ -31,5 +31,6 @@ export const darkColors = {
 };
 
 export const theme = {
-  breakpoint: 600,
+  desktopBreakpoint: 690,
+  smallBreakpoint: 420,
 };
