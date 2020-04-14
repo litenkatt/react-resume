@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ifProp } from 'styled-tools';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Navigation } from './components/Navigation';
@@ -14,7 +15,7 @@ const StyledRouter = styled.div`
 `;
 
 const StyledContent = styled.div`
-  margin: 0 4rem;
+  margin: ${ifProp('theme.desktop', '0 4rem')};
 `;
 
 export const Router = () => {

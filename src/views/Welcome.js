@@ -3,13 +3,19 @@ import styled from 'styled-components';
 // import { theme } from 'styled-tools';
 
 const StyledWelcome = styled.div`
-  text-align: center;
   margin-top: 2rem;
+  max-width: 50rem;
+ & > p {
+     margin: auto;
+ }
 `;
 export const Welcome = () => {
   return (
     <StyledWelcome>
-      Hej
+      <p>
+        Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej
+        Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej
+      </p>
     </StyledWelcome>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from 'styled-tools';
+import { theme, ifProp, ifNotProp } from 'styled-tools';
 import { Link } from 'react-router-dom';
 
 const StyledNavigation = styled.div`
@@ -8,8 +8,18 @@ const StyledNavigation = styled.div`
   display: flex;
   font-size: ${theme('fontSizes.huge')};
   & > a {
-    position: absolute;
-    top: 50vh;
+    position: fixed;
+    top: ${ifProp('theme.desktop', '50vh')};
+    bottom: ${ifNotProp('theme.desktop', '0.8rem')};
+  }
+  & > div {
+    display: ${ifProp('theme.desktop', 'none')};
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 10rem;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, ${theme('colors.base')} 60%);
   }
 `;
 
@@ -25,6 +35,7 @@ const RightArrowLink = styled(Link)`
 export const Navigation = ({ before, after }) => {
   return (
     <StyledNavigation>
+      <div />
       {before && <LeftArrowLink to={before}>➤</LeftArrowLink>}
       {after && <RightArrowLink to={after}>➤</RightArrowLink>}
     </StyledNavigation>
