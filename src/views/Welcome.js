@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { withTranslation } from 'react-i18next';
 // import { theme } from 'styled-tools';
+import { TextBlock } from '../components/TextBlock';
+
 
 const StyledWelcome = styled.div`
   margin-top: 2rem;
@@ -9,13 +12,13 @@ const StyledWelcome = styled.div`
      margin: auto;
  }
 `;
+
+const Intro = withTranslation('intro')(TextBlock);
+
 export const Welcome = () => {
   return (
     <StyledWelcome>
-      <p>
-        Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej
-        Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej Hej
-      </p>
+      <Intro />
     </StyledWelcome>
   );
 };
