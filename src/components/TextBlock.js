@@ -1,22 +1,28 @@
 import React from 'react';
-import styled from 'styled-components';
-// import { theme } from 'styled-tools';
+import styled, { css } from 'styled-components';
+import { ifProp } from 'styled-tools';
 
 const StyledTextBlock = styled.div`
-  margin: 5rem;
+    margin: ${ifProp('theme.desktop', '5rem')};
+
   & > p {
     max-width: 70rem;
-    margin: 4rem;
+    margin: ${ifProp('theme.desktop', '4rem', '2rem 0')};
   }
-  & > p:nth-child(2) {
-    margin-left: 20rem;
-  }
+  ${ifProp(
+    'theme.desktop',
+    css`
+      & > p:nth-child(2) {
+        margin-left: 20rem;
+      }
+    `
+  )};
 `;
 export const TextBlock = ({ t }) => {
   return (
     <StyledTextBlock>
       {t('text', { returnObjects: true }).map((segment) => (
-        <p>{segment}</p>
+        <p key={segment}>{segment}</p>
       ))}
     </StyledTextBlock>
   );

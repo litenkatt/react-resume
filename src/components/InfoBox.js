@@ -8,18 +8,20 @@ import githubBlack from '../assets/images/githubBlack.png';
 
 const StyledInfobox = styled.div`
   flex: 1;
-  max-width: 25rem;
+  max-width: 35rem;
   border: 1px solid ${theme('colors.body')};
   margin: 2rem 0;
-  font-size: 2rem;
   padding: 1rem;
   & > h4 {
     text-align: center;
+    font-size: ${theme('fontSizes.big')}
+
   }
   & > a {
     display: block;
     text-align: center;
     padding: 0.5rem;
+    font-size: ${theme('fontSizes.big')}
   }
   & > div {
     display: flex;
@@ -40,7 +42,7 @@ export const InfoBox = ({ t }) => {
       <h4>{t('street')}</h4>
       <h4>{t('postal')}</h4>
       {t('links', { returnObjects: true }).map((link) => (
-        <a href={link.href}>{link.text}</a>
+        <a key={link.href} href={link.href}>{link.text}</a>
       ))}
       <div>
         <a href="https://www.linkedin.com/in/ninni-hörnaeus-b50325133">
