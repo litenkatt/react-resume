@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
+import { ThemeContext } from '../utils/contexts';
+import linkedin from '../assets/images/linkedin.png';
+import githubWhite from '../assets/images/githubWhite.png';
+import githubBlack from '../assets/images/githubBlack.png';
 
 const StyledInfobox = styled.div`
+  flex: 1;
+  max-width: 25rem;
   border: 1px solid ${theme('colors.body')};
   margin: 2rem 0;
   font-size: 2rem;
@@ -15,15 +21,35 @@ const StyledInfobox = styled.div`
     text-align: center;
     padding: 0.5rem;
   }
+  & > div {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    & > a > img {
+      width: 6rem;
+    }
+  }
 `;
 
-export const InfoBox = ({ t, i18n }) => {
+export const InfoBox = ({ t }) => {
+  const { small, dark } = useContext(ThemeContext);
+  const github = dark ? githubWhite : githubBlack;
   return (
     <StyledInfobox>
-        <h4>{t('street')}</h4>
-        <h4>{t('postal')}</h4>
-        <a href="mailto:ninni@ninni.tech">{t('email')}</a>
-        <a href="tel:0739876588">{t('telephone')}</a>
+      {small && <h4>{t('name')}</h4>}
+      <h4>{t('street')}</h4>
+      <h4>{t('postal')}</h4>
+      {t('links', { returnObjects: true }).map((link) => (
+        <a href={link.href}>{link.text}</a>
+      ))}
+      <div>
+        <a href="https://www.linkedin.com/in/ninni-hörnaeus-b50325133">
+          <img src={linkedin} alt="Linkedin" />
+        </a>
+        <a href="https://github.com/litenkatt/react-resume">
+          <img src={github} alt="Github" />
+        </a>
+      </div>
     </StyledInfobox>
   );
 };

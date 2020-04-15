@@ -7,10 +7,6 @@ import { TextBlock } from '../components/TextBlock';
 
 const StyledWelcome = styled.div`
   margin-top: 2rem;
-  max-width: 50rem;
- & > p {
-     margin: auto;
- }
 `;
 
 const Intro = withTranslation('intro')(TextBlock);

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { withTranslation } from 'react-i18next';
 import { InfoBox } from '../components/InfoBox';
 
-const StyledMain = styled.div`
+const StyledContact = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -14,8 +14,8 @@ const Info = withTranslation('contact')(InfoBox);
 
 export const Contact = () => {
   return (
-      <StyledMain>
+      <StyledContact>
         <Info />
-      </StyledMain>
+      </StyledContact>
   );
 };
