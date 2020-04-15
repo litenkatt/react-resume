@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { ThemeContext } from './utils/contexts';
 import {
   theme,
@@ -13,7 +13,9 @@ import { GlobalStyle } from './styling/GlobalStyle';
 import { Router } from './Router';
 
 function App() {
-  const [desktop, setDesktop] = useState(window.innerWidth > theme.desktopBreakpoint);
+  const [desktop, setDesktop] = useState(
+    window.innerWidth > theme.desktopBreakpoint
+  );
   const [small, setSmall] = useState(window.innerWidth < theme.smallBreakpoint);
 
   const [dark, setDark] = useState(false);
@@ -37,9 +39,9 @@ function App() {
     <ThemeProvider theme={combinedTheme}>
       <ThemeContext.Provider value={{ dark, setDark, small }}>
         <div className="App">
-          <BrowserRouter>
+          <HashRouter basename="/">
             <Router />
-          </BrowserRouter>
+          </HashRouter>
         </div>
         <GlobalStyle />
       </ThemeContext.Provider>

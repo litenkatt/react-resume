@@ -5,8 +5,6 @@ import styled from 'styled-components';
 const StyledTextBlock = styled.p`
   margin: 2rem;
 `;
-export const TextBlock = ({t}) => {
-  return <StyledTextBlock>
-      {t('text')}
-  </StyledTextBlock>;
+export const TextBlock = ({ t }) => {
+  return <StyledTextBlock>{t('text')}</StyledTextBlock>;
 };
