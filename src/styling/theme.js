@@ -1,19 +1,19 @@
 export const desktopFontSizes = {
-  mini: '0.8rem',
-  small: '1rem',
-  medium: '1.6rem',
-  big: '2.4rem',
+  mini: '1.4rem',
+  small: '1.6rem',
+  medium: '2rem',
+  big: '2.5rem',
   huge: '4rem',
   enormous: '6rem',
 };
 
 export const mobileFontSizes = {
-  mini: '0.8rem',
-  small: '1rem',
+  mini: '1.2rem',
+  small: '1.4rem',
   medium: '1.6rem',
-  big: '2rem',
-  huge: '2.4rem',
-  enormous: '2.9rem',
+  big: '1.7rem',
+  huge: '2.7rem',
+  enormous: '5rem',
 };
 
 export const lightColors = {

@@ -40,7 +40,6 @@ const StyledLogo = styled.h1`
 
 export const Header = withTranslation('header')(({ t, i18n, props }) => {
   const { small } = useContext(ThemeContext);
-  console.log(small);
   const firstName = small ? t('firstName')[0] : t('firstName')
   const lastName = small ? t('lastName')[0] : t('lastName')
   return (

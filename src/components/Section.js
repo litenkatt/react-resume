@@ -13,7 +13,8 @@ const StyledItem = styled.div`
     & > span:first-child {
       margin-right: 1rem;
     }
-    & > span:nth-child(3) {
+    & > span:nth-child(2) {
+      margin-left: 1rem;
       color: ${theme('colors.accent')};
     }
     margin-bottom: 0.5rem;
@@ -37,8 +38,7 @@ export const Section = ({ t, i18n }) => {
         {t('subSections', { returnObjects: true }).map((s) => (
           <StyledItem key={`${s.subTitle}_${s.dates}`}>
             <h3>
-              <span>{s.title}</span>
-              <br />
+              <span>{s.title}</span>/
               <span>{s.subTitle}</span>
             </h3>
             {s.dates && <h4>{s.dates}</h4>}

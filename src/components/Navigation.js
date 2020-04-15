@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 const StyledNavigation = styled.div`
   z-index: 100;
   display: flex;
-  font-size: ${theme('fontSizes.huge')};
   & > a {
     position: fixed;
     top: ${ifProp('theme.desktop', '50vh')};
     bottom: ${ifNotProp('theme.desktop', '0.8rem')};
+    font-size: ${theme('fontSizes.huge')};
   }
   & > div {
     display: ${ifProp('theme.desktop', 'none')};

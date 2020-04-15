@@ -29,6 +29,14 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Syncopate', sans-serif;    
   }
 
+  h3 {
+    font-size: ${theme('fontSizes.medium')};
+  }
+
+  h4 {
+    font-size: ${theme('fontSizes.mini')};
+  }
+
   h6 {
     font-size: ${theme('fontSizes.mini')};
     margin: 0.5rem 1rem;
@@ -36,6 +44,7 @@ export const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0.5rem 1rem ; 
+    font-size: ${theme('fontSizes.small')};
   }
 
   a {
@@ -43,5 +52,6 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     text-decoration: none;
     color: ${theme('colors.accent')};
+    font-size: ${theme('fontSizes.small')};
   }
 `;
