@@ -13,7 +13,7 @@ export const mobileFontSizes = {
   medium: '1.6rem',
   big: '1.7rem',
   huge: '2.7rem',
-  enormous: '5rem',
+  enormous: '3.5rem',
 };
 
 export const lightColors = {
@@ -31,6 +31,6 @@ export const darkColors = {
 };
 
 export const theme = {
-  desktopBreakpoint: 690,
-  smallBreakpoint: 420,
+  desktopBreakpoint: 710,
+  smallBreakpoint: 475,
 };
