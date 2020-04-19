@@ -18,7 +18,7 @@ function App() {
   );
   const [small, setSmall] = useState(window.innerWidth < theme.smallBreakpoint);
 
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
