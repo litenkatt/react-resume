@@ -5,8 +5,8 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Navigation } from './components/Navigation';
 import { Welcome } from './views/Welcome';
-import { Main } from './views/Main';
-import { Contact } from './views/Contact';
+import { Experience } from './views/Experience';
+import { Info } from './views/Info';
 
 const StyledRouter = styled.div`
   height: 100%;
@@ -20,7 +20,7 @@ const StyledContent = styled.div`
 `;
 
 export const Router = () => {
-  const routes = ['/', '/main', '/contact'];
+  const routes = ['/', '/experience', '/info'];
   const current = useLocation();
   const currentIndex = routes.indexOf(current.pathname);
 
@@ -33,11 +33,11 @@ export const Router = () => {
       />
       <StyledContent>
         <Switch>
-          <Route path="/main">
-            <Main />
+          <Route path="/experience">
+            <Experience />
           </Route>
-          <Route path="/contact">
-            <Contact />
+          <Route path="/info">
+            <Info />
           </Route>
           <Route path="/">
             <Welcome />

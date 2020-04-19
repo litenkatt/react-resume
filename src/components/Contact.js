@@ -6,7 +6,7 @@ import linkedin from '../assets/images/linkedin.png';
 import githubWhite from '../assets/images/githubWhite.png';
 import githubBlack from '../assets/images/githubBlack.png';
 
-const StyledInfobox = styled.div`
+const StyledContact = styled.div`
   flex: 1;
   max-width: 35rem;
   border: 1px solid ${theme('colors.body')};
@@ -33,15 +33,15 @@ const StyledInfobox = styled.div`
   }
 `;
 
-export const InfoBox = ({ t }) => {
+export const Contact = ({ name, street, postal, links }) => {
   const { small, dark } = useContext(ThemeContext);
   const github = dark ? githubWhite : githubBlack;
   return (
-    <StyledInfobox>
-      {small && <h4>{t('name')}</h4>}
-      <h4>{t('street')}</h4>
-      <h4>{t('postal')}</h4>
-      {t('links', { returnObjects: true }).map((link) => (
+    <StyledContact>
+      {small && <h4>{name}</h4>}
+      <h4>{street}</h4>
+      <h4>{postal}</h4>
+      {links.map((link) => (
         <a key={link.href} href={link.href}>{link.text}</a>
       ))}
       <div>
@@ -52,6 +52,6 @@ export const InfoBox = ({ t }) => {
           <img src={github} alt="Github" />
         </a>
       </div>
-    </StyledInfobox>
+    </StyledContact>
   );
 };

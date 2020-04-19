@@ -14,7 +14,7 @@ const WorkExperience = withTranslation('work')(Section);
 const Education = withTranslation('education')(Section);
 
 
-export const Main = () => {
+export const Experience = () => {
   return (
       <StyledMain>
         <WorkExperience />

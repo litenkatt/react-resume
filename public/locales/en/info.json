@@ -1,0 +1,33 @@
+{
+  "contact": {
+    "name": "Ninni Hörnaeus",
+    "street": "Kransbindarvägen 9",
+    "postal": "12636 Hägersten",
+    "links": [
+      { "text": "ninni@ninni.tech", "href": "mailto:ninni@ninni.tech" },
+      { "text": "0739876588", "href": "tel:0739876588" }
+    ]
+  },
+  "languages": {
+    "title": "Languages I am familiar with in order of confidence",
+    "list": [
+      "Swedish",
+      "English",
+      "Javascript",
+      "CSS",
+      "HTML",
+      "Java",
+      "German"
+
+    ]
+  },
+  "skills": {
+    "title": "Other skills in order of confidence",
+    "list": [
+      "React.js",
+      "Styled components",
+      "Git"
+
+    ]
+  }
+}

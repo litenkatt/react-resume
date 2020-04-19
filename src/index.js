@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import WebFont from 'webfontloader';
 import './styling/index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 import './i18n';
 
 WebFont.load({
@@ -20,5 +19,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-serviceWorker.unregister();
