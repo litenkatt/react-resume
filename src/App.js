@@ -28,7 +28,6 @@ function App() {
   }, []);
 
   const handleResize = (e) => {
-    console.log("resized", e.target.innerWidth, theme.desktopBreakpoint, e.target.innerWidth > theme.desktopBreakpoint)
     setDesktop(e.target.innerWidth > theme.desktopBreakpoint);
     setSmall(e.target.innerWidth < theme.smallBreakpoint);
   };

@@ -15,7 +15,7 @@ margin-right: 1rem;
       position: relative;
     top: ${ifProp( "dark" , "2rem", "0")};
     transition: top 0.3s ease-in-out;
-    background: ${theme('colors.body')};
+    background: ${theme('colors.base')};
     height: 2rem;
     width: 3rem;
   }

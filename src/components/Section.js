@@ -3,15 +3,18 @@ import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
 const StyledSection = styled.div`
-  border-left: 1px dashed ${theme('colors.body')};;
+  border-left: 1px dashed ${theme('colors.base')};;
   margin: 2rem 0;
-  flex: 1 0 calc(320px - 4rem);;
+  flex: 1 0 calc(320px - 4rem);
 `;
 
 const StyledItem = styled.div`
   & > h3 {
-    & > span:first-child {
-      margin-right: 1rem;
+    & > span {
+      display: inline-block;
+    }
+    & > span:first-child > span {
+      margin-left: 1rem;
     }
     & > span:nth-child(2) {
       margin-left: 1rem;
@@ -38,7 +41,7 @@ export const Section = ({ t, i18n }) => {
         {t('subSections', { returnObjects: true }).map((s) => (
           <StyledItem key={`${s.subTitle}_${s.dates}`}>
             <h3>
-              <span>{s.title}</span>/
+              <span>{s.title} <span>/</span></span>
               <span>{s.subTitle}</span>
             </h3>
             {s.dates && <h4>{s.dates}</h4>}

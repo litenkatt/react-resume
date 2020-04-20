@@ -19,7 +19,7 @@ const StyledNavigation = styled.div`
     left: 0;
     height: 10rem;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0) 0%, ${theme('colors.base')} 60%);
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, ${theme('colors.background')} 60%);
   }
 `;
 

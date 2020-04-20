@@ -1,7 +1,7 @@
 import React from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { ifProp } from 'styled-tools';
-import { Switch, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Navigation } from './components/Navigation';
 import { Welcome } from './views/Welcome';

@@ -1,36 +1,36 @@
 export const desktopFontSizes = {
-  mini: '1.4rem',
-  small: '1.6rem',
-  medium: '2rem',
-  big: '2.5rem',
-  huge: '4rem',
-  enormous: '6rem',
+  mini: '0.9rem',
+  small: '1rem',
+  medium: '1.25rem',
+  big: '1.6rem',
+  huge: '2.5rem',
+  enormous: '3.3rem',
 };
 
 export const mobileFontSizes = {
-  mini: '1.2rem',
-  small: '1.4rem',
-  medium: '1.6rem',
-  big: '1.7rem',
-  huge: '2.7rem',
-  enormous: '3.5rem',
+  mini: '0.75rem',
+  small: '0.9rem',
+  medium: '1rem',
+  big: '1.1rem',
+  huge: '1.7rem',
+  enormous: '2rem',
 };
 
 export const lightColors = {
   accent: '#9055b5',
   grey: '#636363',
-  base: "#FFFFFF",
-  body: "#000000"
+  background: "#FFFFFF",
+  base: "#000000"
 };
 
 export const darkColors = {
   accent: '#FF0745',
   grey: '#636363',
-  base: "#000000",
-  body: "#FFFFFF"
+  background: "#000000",
+  base: "#FFFFFF"
 };
 
 export const theme = {
   desktopBreakpoint: 710,
-  smallBreakpoint: 475,
+  smallBreakpoint: 530,
 };

@@ -2,15 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 import { theme } from 'styled-tools';
 
 export const GlobalStyle = createGlobalStyle`
-  :root {
-    font-size: 62.5%;
-  }
 
   body {
     font-family: 'Gotu', sans-serif;   
     box-sizing: border-box;
-    background: ${theme('colors.base')};
-    color: ${theme('colors.body')};
+    background: ${theme('colors.background')};
+    color: ${theme('colors.base')};
   
   }
 

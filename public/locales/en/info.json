@@ -9,7 +9,8 @@
     ]
   },
   "languages": {
-    "title": "Languages I am familiar with in order of confidence",
+    "title": "Languages",
+    "subTitle": "(in order of confidence)",
     "list": [
       "Swedish",
       "English",
@@ -18,16 +19,18 @@
       "HTML",
       "Java",
       "German"
-
     ]
   },
   "skills": {
-    "title": "Other skills in order of confidence",
+    "title": "Other skills",
+    "subTitle": "(in order of confidence)",
     "list": [
       "React.js",
       "Styled components",
-      "Git"
-
+      "Git",
+      "AWS",
+      "Scrum",
+      "Testing"
     ]
   }
 }

@@ -15,7 +15,7 @@ const intro = keyframes`
 `;
 
 const StyledHeader = styled.div`
-  border-bottom: 2px ${theme('colors.body')} solid;
+  border-bottom: 2px ${theme('colors.base')} solid;
   width: 100%;
   display: flex;
   align-items: center;
