@@ -1,6 +1,7 @@
 {
   "text": [
     "Hello and welcome to my digital resume. I built this page just as much to show what I can actually do as to use as an actual resume. It is definitely unnecessarily complicated, just to have an excuse to use different techniques.",
-    "I am a developer with mostly React experience, currently looking for a new job. I would prefer a job that includes React but I would not mind working a bit more broadly."
+    "I am a developer with mostly React experience, currently looking for a new job. I would prefer a job that includes React but I would not mind working a bit more broadly.",
+    "Just a disclaimer; I am not a designer but I still decided to design it by myself and implement it with pure CSS. Please don't judge it by the looks."
   ]
 }

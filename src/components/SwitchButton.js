@@ -4,20 +4,20 @@ import { theme, ifProp } from 'styled-tools';
 import { ThemeContext } from '../utils/contexts';
 
 const StyledSwitchButton = styled.div`
-margin-right: 1rem;
-  height: 4rem;
-  width: 3rem;
+  margin-right: 1rem;
+  height: 3rem;
+  width: 2rem;
   background: ${theme('colors.grey')};
   border-radius: 10%;
   overflow: hidden;
   cursor: pointer;
   & > div {
-      position: relative;
-    top: ${ifProp( "dark" , "2rem", "0")};
+    position: relative;
+    top: ${ifProp('dark', '1.5rem', '0')};
     transition: top 0.3s ease-in-out;
     background: ${theme('colors.base')};
-    height: 2rem;
-    width: 3rem;
+    height: 1.5rem;
+    width: 2rem;
   }
 `;
 

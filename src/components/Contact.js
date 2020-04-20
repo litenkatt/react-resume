@@ -7,12 +7,9 @@ import githubWhite from '../assets/images/githubWhite.png';
 import githubBlack from '../assets/images/githubBlack.png';
 
 const StyledContact = styled.div`
-  flex: 1;
-  max-width: 35rem;
+  max-width: 43rem;
   border: 1px solid ${theme('colors.base')};
-  margin: 2rem 0;
   padding: 1rem;
-  margin-right: 2rem;
   & > h4 {
     text-align: center;
     font-size: ${theme('fontSizes.big')}

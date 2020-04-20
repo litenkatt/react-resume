@@ -4,6 +4,7 @@ import { prop, theme } from 'styled-tools';
 
 const StyledList = styled.div`
   margin: 4rem 0;
+  min-width: 20rem;
   & > h2 {
     text-align: center;
     margin: 0;

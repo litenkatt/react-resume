@@ -9,19 +9,21 @@ const StyledInfo = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 -2rem;
   & > div {
     flex: 1;
+    margin: 2rem 2rem 0;
   }
 `;
 
 export const Info = withTranslation('info')(({ t }) => {
   return (
     <StyledInfo>
-      <Contact {...t('contact', { returnObjects: true })} />
       <div>
         <List {...t('languages', { returnObjects: true })} />
         <List {...t('skills', { returnObjects: true })} />
       </div>
+      <Contact {...t('contact', { returnObjects: true })} />
     </StyledInfo>
   );
 });

@@ -1,0 +1,36 @@
+{
+  "contact": {
+    "name": "Ninni Hörnaeus",
+    "street": "Kransbindarvägen 9",
+    "postal": "12636 Hägersten",
+    "links": [
+      { "text": "ninni@ninni.tech", "href": "mailto:ninni@ninni.tech" },
+      { "text": "0739876588", "href": "tel:0739876588" }
+    ]
+  },
+  "languages": {
+    "title": "Språk",
+    "subTitle": "(sorterat efter nivå)",
+    "list": [
+      "Svenska",
+      "Engelska",
+      "Javascript",
+      "CSS",
+      "HTML",
+      "Java",
+      "Tyska"
+    ]
+  },
+  "skills": {
+    "title": "Andra färdigheter",
+    "subTitle": "(sorterat efter nivå)",
+    "list": [
+      "React.js",
+      "Styled components",
+      "Git",
+      "AWS",
+      "Scrum",
+      "Testning"
+    ]
+  }
+}
