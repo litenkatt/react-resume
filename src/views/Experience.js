@@ -10,15 +10,11 @@ const StyledMain = styled.div`
   flex-wrap: wrap;
 `;
 
-const WorkExperience = withTranslation('work')(Section);
-const Education = withTranslation('education')(Section);
-
-
-export const Experience = () => {
+export const Experience = withTranslation('experience')(({ t }) => {
   return (
       <StyledMain>
-        <WorkExperience />
-        <Education />
+        <Section {...t('work', { returnObjects: true })}/>
+        <Section {...t('education', { returnObjects: true })}/>
       </StyledMain>
   );
-};
+});

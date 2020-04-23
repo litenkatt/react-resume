@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
 const StyledSection = styled.div`
-  border-left: 1px dashed ${theme('colors.base')};;
+  border-left: 1px dashed ${theme('colors.base')};
   margin: 2rem 0;
   flex: 1 0 calc(320px - 4rem);
 `;
@@ -33,15 +33,17 @@ const StyledItem = styled.div`
   margin: 2rem 0;
 `;
 
-export const Section = ({ t, i18n }) => {
+export const Section = ({ title, subSections }) => {
   return (
     <StyledSection>
-      <h2>{t('title')}</h2>
+      <h2>{title}</h2>
       <div>
-        {t('subSections', { returnObjects: true }).map((s) => (
+        {subSections.map((s) => (
           <StyledItem key={`${s.subTitle}_${s.dates}`}>
             <h3>
-              <span>{s.title} <span>/</span></span>
+              <span>
+                {s.title} <span>/</span>
+              </span>
               <span>{s.subTitle}</span>
             </h3>
             {s.dates && <h4>{s.dates}</h4>}

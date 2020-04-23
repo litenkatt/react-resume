@@ -1,0 +1,53 @@
+{
+  "work": {
+    "title": "Work experience",
+    "subSections": [
+      {
+        "title": "Frontend Developer",
+        "subTitle": "Zensum",
+        "dates": "OCTOBER 2019 - MARCH 2020",
+        "description": "Worked in a frontend-team building react applications, mostly from scratch.",
+        "extra": "Tech: React.js, Styled components, i18next, datoCMS"
+      },
+      {
+        "title": "Developer",
+        "subTitle": "Scania",
+        "dates": "MARCH 2019 - OCTOBER 2019",
+        "description": "Continued my employment at Scania after the trainee period. Mostly back-end work during this period. We also experimented a lot with mob-programming.",
+        "extra": "Tech: Java, Springboot, React.js, AWS "
+      },
+      {
+        "title": "Developer",
+        "subTitle": "Scania – via Sigma Young Talent",
+        "dates": "SEPTEMBER 2018 - MARCH 2019",
+        "description": "Traineeprogram located at Scania. Some courses but mostly learning by doing. The doing part was mostly building react applications.",
+        "extra": "Tech: React.js, Java, Springboot"
+      },
+      {
+        "title": "IT-support",
+        "subTitle": "Nya Karolinska – via Academic Work",
+        "dates": "OCTOBER 2016 – FEBRUARY 2017",
+        "description": "Worked extra as IT-support during the opening of NKS. Mostly installing hardware and being available for questions."
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "subSections": [
+      {
+        "title": "Bachelor's programme in computer and systems science",
+        "subTitle": "Stockholm university",
+        "dates": "SEPTEMBER 2015 – JUNE 2018 ",
+        "description": "Except for the obligatory courses, almost all of the courses were related to programming in some a way.",
+        "extra": "Waiting for grading"
+      },
+      {
+        "title": "Bachelor's programme in game design",
+        "subTitle": "Stockholm university",
+        "dates": "SEPTEMBER 2013 – JUNE 2015",
+        "description": "Switched to computer and system science after realising that I am more of a programmer than designer.",
+        "extra": "Not completed"
+      }
+    ]
+  }
+}

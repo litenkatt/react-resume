@@ -1,18 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ifProp } from 'styled-tools';
 
-const StyledLanguageChangeButton = styled.h3`
-    cursor: pointer;
+const StyledLanguage = styled.span`
+  cursor: pointer;
+  font-size: ${ifProp('current', '120%')};
 `;
 
 export const LanguageChangeButton = ({ i18n }) => {
   const handleClick = (lang) => {
-    i18n.changeLanguage(lang)
+    i18n.changeLanguage(lang);
   };
+  console.log(i18n);
   return (
-    <StyledLanguageChangeButton>
-      <span onClick={() => handleClick('se')}>se</span>/
-      <span onClick={() => handleClick('en')}>en</span>
-    </StyledLanguageChangeButton>
+    <h3>
+      <StyledLanguage
+        current={i18n.language === 'se'}
+        onClick={() => handleClick('se')}
+      >
+        se
+      </StyledLanguage>
+      /
+      <StyledLanguage
+        current={i18n.language === 'en'}
+        onClick={() => handleClick('en')}
+      >
+        en
+      </StyledLanguage>
+    </h3>
   );
 };
