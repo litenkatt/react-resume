@@ -3,17 +3,18 @@ import styled, { css } from 'styled-components';
 import { ifProp } from 'styled-tools';
 
 const StyledTextBlock = styled.div`
-    margin: ${ifProp('theme.desktop', '5rem')};
-
   & > p {
-    max-width: 70rem;
-    margin: ${ifProp('theme.desktop', '4rem', '2rem 0')};
+    max-width: 60rem;
+    margin: ${ifProp('theme.desktop', '4rem 0', '2rem 0')};
   }
   ${ifProp(
     'theme.desktop',
     css`
+      width: 80%;
+      margin: auto;
+
       & > p:nth-child(2) {
-        margin-left: 20rem;
+        margin-left: 2rem;
       }
     `
   )};
