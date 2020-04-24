@@ -1,15 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { theme, ifProp, ifNotProp } from 'styled-tools';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-  useHistory,
-  useLocation,
-} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const StyledNavigation = styled.div`
   z-index: 100;
