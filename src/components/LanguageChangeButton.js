@@ -11,7 +11,6 @@ export const LanguageChangeButton = ({ i18n }) => {
   const handleClick = (lang) => {
     i18n.changeLanguage(lang);
   };
-  console.log(i18n);
   return (
     <h3>
       <StyledLanguage

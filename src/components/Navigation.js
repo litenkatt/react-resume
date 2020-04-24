@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { theme, ifProp, ifNotProp } from 'styled-tools';
-import { Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation,
+} from 'react-router-dom';
 
 const StyledNavigation = styled.div`
   z-index: 100;
@@ -19,7 +27,10 @@ const StyledNavigation = styled.div`
     left: 0;
     height: 10rem;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0) 0%, ${theme('colors.background')} 60%);
+    background: linear-gradient(
+      rgba(0, 0, 0, 0) 0%,
+      ${theme('colors.background')} 60%
+    );
   }
 `;
 
@@ -33,6 +44,24 @@ const RightArrowLink = styled(Link)`
 `;
 
 export const Navigation = ({ before, after }) => {
+  let history = useHistory();
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleNav);
+    return () => {
+      window.removeEventListener('keydown', handleNav);
+    };
+    // eslint-disable-next-line
+  }, [before, after]);
+
+  const handleNav = (e) => {
+    if (e.key === 'ArrowRight') {
+      after && history.push(after);
+    }
+    if (e.key === 'ArrowLeft') {
+      before && history.push(before);
+    }
+  };
   return (
     <StyledNavigation>
       <div />
