@@ -14,14 +14,14 @@ export const LanguageChangeButton = ({ i18n }) => {
   return (
     <h3>
       <StyledLanguage
-        current={i18n.language === 'se'}
-        onClick={() => handleClick('se')}
+        current={i18n.language === 'sv'}
+        onClick={() => handleClick('sv')}
       >
-        se
+        sv
       </StyledLanguage>
       /
       <StyledLanguage
-        current={i18n.language !== 'se'}
+        current={i18n.language !== 'sv'}
         onClick={() => handleClick('en')}
       >
         en
