@@ -21,7 +21,7 @@ export const LanguageChangeButton = ({ i18n }) => {
       </StyledLanguage>
       /
       <StyledLanguage
-        current={i18n.language === 'en'}
+        current={i18n.language !== 'se'}
         onClick={() => handleClick('en')}
       >
         en
