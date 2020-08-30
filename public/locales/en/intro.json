@@ -1,7 +1,7 @@
 {
   "text": [
-    "Hello and welcome to my digital resume. I built this page just as much to show what I can actually do as to use as an actual resume. It is definitely unnecessarily complicated, just to have an excuse to use different techniques.",
-    "I am a developer with mostly React experience, currently looking for a new job. During my current unemployment period, I've finally finished my bachelor, played around with Node and build this site. I feel like there is still work to do on this site but it is currently paused to work on AWS certified developer. I really love Javascript and would prefer a job that includes it and preferrably some cloud as well. ",
-    "Just a disclaimer; I am not a designer but I still decided to design it by myself and implement it with pure CSS. Please don't judge it by the looks."
+    "Hello and welcome to my digital resume. I built this page partly to show what I can do, but also to use as an actual resume.",
+    "Like so many others, I lost my job due to the corona virus and am therefore looking for new opportunities. During this period, among other things, I have been working on a course with the goal of passing the “AWS certified developer” exam. My previous experience is mostly React.js, the method used for building this page, but also some Java.",
+    "Right now, almost everything is of interest but my long time goal is to work on something that has a real positive impact on the world. I am a big fan of Javascript, especially React but the most important thing for me is that the daily work feels meaningful and having colleagues I get along with."
   ]
 }
