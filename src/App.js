@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeContext } from './utils/contexts';
 import {
   theme,
@@ -39,9 +39,9 @@ function App() {
     <ThemeProvider theme={combinedTheme}>
       <ThemeContext.Provider value={{ dark, setDark, small }}>
         <div className="App">
-          <HashRouter basename="/">
+          <BrowserRouter basename="/">
             <Router />
-          </HashRouter>
+          </BrowserRouter>
         </div>
         <GlobalStyle />
       </ThemeContext.Provider>
