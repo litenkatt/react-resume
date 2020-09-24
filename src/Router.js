@@ -24,18 +24,6 @@ export const Router = () => {
   const routes = ['/', '/experience', '/info'];
   const current = useLocation();
   const currentIndex = routes.indexOf(current.pathname.slice(3));
-  const en = "en-US/"
-  // const exp = `^${en}-[A-Z]{2}/$`
-
-  // console.log(
-  //   new RegExp(exp).test(
-  //     "en-US/"
-  //   )
-  // );
-
-  console.log(new RegExp(`^${en.slice(0, 2)}-[A-Z]{2}/$`).test(
-                  en
-                ) )
   return (
     <StyledRouter>
       <Header />
@@ -56,13 +44,10 @@ export const Router = () => {
             render={(props) =>
               i18n.languages.includes(props.match.params.lang) ? (
                 <Welcome />
-              ) : 
-              new RegExp(`^${(props.match.params.lang).slice(0, 2)}-[A-Z]{2}$`).test(
-                  props.match.params.lang
-                ) 
-                &&
-                i18n.languages.includes(props.match.params.lang.slice(0, 2)) 
-                ? (
+              ) : new RegExp(
+                  `^${props.match.params.lang.slice(0, 2)}-[A-Z]{2}$`
+                ).test(props.match.params.lang) &&
+                i18n.languages.includes(props.match.params.lang.slice(0, 2)) ? (
                 <Redirect to={`/${props.match.params.lang.slice(0, 2)}`} />
               ) : (
                 <Redirect to={`/${i18n.language}/${props.match.params.lang}`} />
