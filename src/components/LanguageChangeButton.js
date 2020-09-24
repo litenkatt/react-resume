@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ifProp } from 'styled-tools';
+import { useHistory } from 'react-router-dom';
 
 const StyledLanguage = styled.span`
   cursor: pointer;
@@ -8,8 +9,10 @@ const StyledLanguage = styled.span`
 `;
 
 export const LanguageChangeButton = ({ i18n }) => {
+  let history = useHistory();
   const handleClick = (lang) => {
     i18n.changeLanguage(lang);
+    history.push(`/${lang}${history.location.pathname.slice(3)}`);
   };
   return (
     <h3>

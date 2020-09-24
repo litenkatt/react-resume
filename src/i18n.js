@@ -1,19 +1,20 @@
 import i18n from 'i18next';
-import detector from "i18next-browser-languagedetector";
+import detector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
-import Backend from 'i18next-xhr-backend';
+import SyncBackend from 'i18next-xhr-backend';
 
 const options = {
-  order: ['path', 'navigator']
-}
+  order: ['path', 'navigator'],
+};
 
 i18n
   .use(detector)
-  .use(Backend)
+  .use(SyncBackend)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
+    initImmediate: false, // To be able to access language directly
     detection: options,
-    fallbackLng: 'en',
+    fallbackLng: ['en', 'sv'],
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
