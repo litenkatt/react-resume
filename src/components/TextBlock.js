@@ -13,7 +13,7 @@ const StyledTextBlock = styled.div`
       width: 80%;
       margin: auto;
 
-      & > p:nth-child(2) {
+      & > p:nth-child(even) {
         margin-left: 2rem;
       }
     `
