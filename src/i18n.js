@@ -12,6 +12,7 @@ i18n
   .use(SyncBackend)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
+    load: 'languageOnly',
     initImmediate: false, // To be able to access language directly
     detection: options,
     fallbackLng: ['en', 'sv'],

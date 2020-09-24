@@ -3,19 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "i18next": "^19.3.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@testing-library/user-event": "^12.1.6",
+    "i18next": "^19.7.0",
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-xhr-backend": "^3.2.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-i18next": "^11.3.4",
-    "react-router-dom": "^5.1.2",
+    "react-i18next": "^11.7.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
-    "styled-components": "^5.0.1",
-    "styled-tools": "^1.7.1",
+    "styled-components": "^5.2.0",
+    "styled-tools": "^1.7.2",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -40,6 +40,6 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^2.0.2"
+    "prettier": "^2.1.2"
   }
 }
