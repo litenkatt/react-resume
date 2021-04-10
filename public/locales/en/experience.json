@@ -4,6 +4,13 @@
     "subSections": [
       {
         "title": "Frontend Developer",
+        "subTitle": "Brilliant works",
+        "dates": "DECEMBER 2020 -",
+        "description": "",
+        "extra": "Teknik: Stencil, Ionic, Angular"
+      },
+      {
+        "title": "Frontend Developer",
         "subTitle": "Zensum",
         "dates": "OCTOBER 2019 - MARCH 2020",
         "description": "Worked in a frontend-team building react applications, mostly from scratch.",
