@@ -37,7 +37,6 @@ const RightArrowLink = styled(Link)`
 
 export const Navigation = ({ before, after }) => {
   let history = useHistory();
-console.log(before, after)
   useEffect(() => {
     window.addEventListener('keydown', handleNav);
     return () => {

@@ -21,6 +21,7 @@ const StyledContent = styled.div`
 `;
 
 export const Router = () => {
+
   const routes = ['/', '/experience', '/info'];
   const current = useLocation();
   const currentIndex = routes.indexOf(current.pathname.slice(3)) === -1 ? 0 : routes.indexOf(current.pathname.slice(3));
@@ -33,27 +34,23 @@ export const Router = () => {
       />
       <StyledContent>
         <Switch>
-          <Route path="/:lang/experience">
+          <Route path="/:lang/experience" exact>
             <Experience />
           </Route>
-          <Route path="/:lang/info">
+          <Route path="/:lang/info" exact>
             <Info />
           </Route>
           <Route
             path="/:lang"
-            render={(props) => i18n.languages.includes(props.match.params.lang) ? (
+            exact
+            render={(props) => i18n.languages.includes(props.match.params.lang) ? 
                 <Welcome />
-              ) : new RegExp(
-                  `^${props.match.params.lang.slice(0, 2)}-[A-Z]{2}$`
-                ).test(props.match.params.lang) &&
-                i18n.languages.includes(props.match.params.lang.slice(0, 2)) ? (
-                <Redirect to={`/${props.match.params.lang.slice(0, 2)}`} />
-              ) : (//fixes links and adds language prefix
-                <Redirect to={`/${i18n.language}/${props.match.params.lang}`} />
+               : (//fixes links and adds language prefix
+                <Redirect to={`/${i18n.language.slice(0, 2)}/${props.match.params.lang}`} />
               )
             }
           />
-          <Route path="/">
+          <Route>
             <Redirect to={`/${i18n.language.slice(0, 2)}/`} />
           </Route>
         </Switch>

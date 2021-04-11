@@ -11,6 +11,7 @@ import {
 } from './styling/theme';
 import { GlobalStyle } from './styling/GlobalStyle';
 import { Router } from './Router';
+import i18n from './i18n';
 
 function App() {
   const [desktop, setDesktop] = useState(
@@ -21,6 +22,9 @@ function App() {
   const [dark, setDark] = useState(true);
 
   useEffect(() => {
+    if(i18n.languages.includes(i18n.language.slice(0, 2))){
+      i18n.language = i18n.language.slice(0, 2);
+    }
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
