@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import { theme } from 'styled-tools';
 import { withTranslation } from 'react-i18next';
 import { SwitchButton } from './SwitchButton';
@@ -35,6 +37,7 @@ const StyledLogo = styled.h1`
   }
   & > span:nth-child(2){
     font-size: 0.8em;
+    color: ${theme('colors.base')};
   }
 `;
 
@@ -44,10 +47,12 @@ export const Header = withTranslation('header')(({ t, i18n, props }) => {
   const lastName = small ? t('lastName')[0] : t('lastName')
   return (
     <StyledHeader>
+      <Link to="/">
       <StyledLogo>
         <span>{firstName}</span>
         <span>{lastName}</span>
       </StyledLogo>
+      </Link>
       <div>
         <LanguageChangeButton i18n={i18n} />
         <SwitchButton {...props} />

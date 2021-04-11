@@ -23,7 +23,7 @@ const StyledContent = styled.div`
 export const Router = () => {
   const routes = ['/', '/experience', '/info'];
   const current = useLocation();
-  const currentIndex = routes.indexOf(current.pathname.slice(3));
+  const currentIndex = routes.indexOf(current.pathname.slice(3)) || 0;
   return (
     <StyledRouter>
       <Header />
@@ -40,9 +40,8 @@ export const Router = () => {
             <Info />
           </Route>
           <Route
-            path="/:lang/"
-            render={(props) =>
-              i18n.languages.includes(props.match.params.lang) ? (
+            path="/:lang"
+            render={(props) => i18n.languages.includes(props.match.params.lang) ? (
                 <Welcome />
               ) : new RegExp(
                   `^${props.match.params.lang.slice(0, 2)}-[A-Z]{2}$`
