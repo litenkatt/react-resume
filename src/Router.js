@@ -23,7 +23,7 @@ const StyledContent = styled.div`
 export const Router = () => {
   const routes = ['/', '/experience', '/info'];
   const current = useLocation();
-  const currentIndex = routes.indexOf(current.pathname.slice(3)) || 0;
+  const currentIndex = routes.indexOf(current.pathname.slice(3)) >= 0 ? routes.indexOf(current.pathname.slice(3)) : 0;
   return (
     <StyledRouter>
       <Header />
@@ -39,7 +39,9 @@ export const Router = () => {
           <Route path="/:lang/info">
             <Info />
           </Route>
-          <Route
+          <Route path="/">
+            <Redirect to={`/${i18n.language}/`} />
+            <Route
             path="/:lang"
             render={(props) => i18n.languages.includes(props.match.params.lang) ? (
                 <Welcome />
@@ -53,8 +55,6 @@ export const Router = () => {
               )
             }
           />
-          <Route path="/">
-            <Redirect to={`/${i18n.language}/`} />
           </Route>
         </Switch>
       </StyledContent>
