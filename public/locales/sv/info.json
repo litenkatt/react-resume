@@ -14,7 +14,8 @@
     "list": [
       "Svenska",
       "Engelska",
-      "Javascript",
+      "JavaScript",
+      "TypeScript",
       "CSS",
       "HTML",
       "Java",
@@ -28,9 +29,10 @@
       "React.js",
       "Styled components",
       "Git",
-      "AWS",
+      "Stencil",
       "Scrum",
-      "Testning"
+      "Testning",
+      "Angular"
     ]
   }
 }
