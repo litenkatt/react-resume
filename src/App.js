@@ -24,6 +24,8 @@ function App() {
   useEffect(() => {
     if(i18n.languages.includes(i18n.language.slice(0, 2))){
       i18n.language = i18n.language.slice(0, 2);
+    }else{
+      i18n.language = i18n.languages[0];
     }
     window.addEventListener('resize', handleResize);
     return () => {
