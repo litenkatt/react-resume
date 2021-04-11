@@ -16,6 +16,7 @@ i18n
     initImmediate: false, // To be able to access language directly
     detection: options,
     fallbackLng: ['en', 'sv'],
+    supportedLngs: ['en', 'sv'],
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
